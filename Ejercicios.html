@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <section>
+        <!-- Ejercicio 1 -->
+        <!-- Una fábrica de chocolates nos pidió un programa que se encargue de armar una caja de bombones con distintos sabores . 
+        Actualmente venden bombones de frutilla, menta y chocolate amargo que representaremos con bolitas de color Rojo, Verde y Negro
+         respectivamente. Las cajas tienen cuatro bombones y esta en particular tendrá los siguientes gustos. -->
+
+         Actividad:
+        <!-- Creá el programa que haga la caja de bombones solicitada. El cabezal comienza en el extremo Sur Oeste y no importa dónde termina. -->
+
+        program{
+            Poner (Verde)
+            Mover (Este)
+            Poner (Verde)
+            Mover (Este)
+            Poner (Verde)
+            Mover (Este)
+            Poner (Negro)
+          }
+
+    </section>
+
+
+
+    <section>
+        <!-- Ejercicio 2 -->
+
+        <!-- Una extravagante repostería  nos pidió ayuda para decorar su famosa torta cuadrada de chocolate:
+
+        La decoración consta de un confite de un mismo color en cada extremo de la torta. El color puede ser Azul, Rojo, Verde o Negro,
+         ¡eso depende del gusto de quien encargue la torta! Si por ejemplo, alguien pide una torta con confites de color Rojo, 
+         la torta decorada debería verse así: -->
+
+         Actividad;
+
+         <!-- Definí el procedimiento PonerConfites que recibe un color como argumento y decora la torta con confites de ese color 
+         comenzando en el extremo Sur Oeste. No importa dónde termina el cabezal. -->
+
+         procedure PonerConfites (color){
+            Poner (color)
+            Mover (Norte)
+            Mover (Norte)
+            Poner (color)
+            Mover (Este)
+            Mover (Este)
+            Poner (color)
+            Mover (Sur)
+            Mover (Sur)
+            Poner (color)
+          }
+
+    </section>
+
+
+    <section>
+        <!-- Ejercicio 3 -->
+
+        <!-- Sabemos que no es saludable para nuestros oídos escuchar música a volúmenes muy altos . 
+        Sin embargo, si está muy bajita tampoco escucharemos. Lo ideal es escucharla a un nivel entre 21 y 72. 
+        Para ello tenemos la función esRecomendable:
+
+                esRecomendable(40)
+        true // Porque está entre 21 y 72
+
+        esRecomendable(19) 
+        false // Porque es menor que 21
+
+        esRecomendable(80)
+        false // Porque es mayor que 72
+
+        Definí la función esRecomendable que dado un volumen nos diga si está en el rango recomendable. -->
+
+        function esRecomendable (volumen){
+            return ((volumen>=21)&&(volumen<=72));  
+          }
+        
+    </section>
+
+    <section>
+        <!-- Ejercicio 4 -->
+
+        <!-- Vamos a desarrollar un GPS que nos recomiende un destino a partir de una dirección .
+         Para ello definiremos una función que reciba una dirección y dos destinos y según el valor del primer argumento nos recomiende hacia donde ir.
+          Las únicas direcciones posibles son "este" y "sur". En caso que el primer argumento sea "este" nos dirá que vayamos al primer destino, 
+          si es "sur" nos recomendará que vayamos al segundo:
+
+          dondeVamos("este", "Gral. Las Heras", "Merlo")
+            "Vamos a Gral. Las Heras"
+
+        dondeVamos("sur", "Iguazú", "El Pato")
+        "Vamos a El Pato"
+        
+        actividad:
+
+        Definí la función dondeVamos. -->
+
+
+        function dondeVamos (direccion, dest1, dest2){
+            if (direccion==="este"){
+              return ("Vamos a "+dest1);
+                } else {
+                  return ("Vamos a "+dest2);
+                }
+            
+          }
+
+    </section>
+
+    <section>
+        <!-- Ejercicio 5 -->
+        <!-- Un local gastronómico quiere clasificar su vajilla  y contar cuántos "plato"s tiene a partir de una lista:
+        cuantosHay(["jarra", "plato", "taza", "plato", "plato", "bowl"])
+        3
+
+        cuantosHay(["plato", "taza", "taza", "bowl"])
+        1
+
+        Definí la función cuantosHay que a partir de una lista con la vajilla nos dice la cantidad de "plato"s que tiene. -->
+    
+        function cuantosHay (lista){
+            let cant=0
+            for (let vajilla of lista){
+              if (vajilla==="plato"){
+                cant+=1
+              }
+            }
+            return cant;
+          }
+    </section>
+
+    <section>
+        <!-- Ejercicio 6: Ejercicio 6 -->
+
+        <!-- En una casa de comidas guardan registro de los envíos que realizan a sus clientes . Estos registros tienen la siguiente forma:
+
+        let envioCalleFalsa = {
+            direccion: "Calle Falsa 123",
+            pedidos: ["Muzzarella", "Empanadas de verdura", "Papas fritas"],
+            ultimoPedido: "15/11/2021"
+          }
+          
+          let envioWallaby = {
+            direccion: "Wallaby 42",
+            pedidos: ["Ravioles con fileto", "10 piezas de sushi"],
+            ultimoPedido: "16/12/2021"
+          }
+
+          Definí la función resumenDeInformacion que permita obtener un resumen de la información registrada de esta manera:
+
+        resumenDeInformacion(envioCalleFalsa)
+        "Calle Falsa 123 pidió por última vez el 15/11/2021 y realizó en total 3 pedidos"
+
+        resumenDeInformacion(envioWallaby)
+        "Wallaby 42 pidió por última vez el 15/11/2021 y realizó en total 2 pedidos" -->
+
+        function resumenDeInformacion (reg){
+            return reg.direccion+" pidió por última vez el 
+            "+reg.ultimoPedido+" y realizó en total "
+            +longitud(reg.pedidos)+" pedidos";
+          }
+
+    </section>
+
+    <section>
+        <!-- Ejercicio 7 -->
+
+        <!-- ¡Dejemos atrás a JavaScript para pasar a Ruby! 
+
+        En esta ocasión queremos desarrollar parte de un juego, para ello vamos a modelar a su personaje principal: Ofelia. Este personaje va a recolectar monedas y sabemos que:
+
+        inicialmente tiene 3 monedas;
+        puede duplicar sus monedas;
+        si tiene más de 75 monedas diremos que es profesional?. -->
+
+        <!-- Definí en Ruby, el objeto Ofelia que tenga un atributo @monedas con su getter. 
+        El objeto entiende los mensajes duplicar_monedas! (que multiplica por 2 su cantidad de monedas) y profesional?. 
+        No te olvides de inicializar el atributo @monedas con el valor correspondiente. -->
+
+        module Ofelia
+            @monedas=3
+            def self.monedas
+             @monedas
+         end
+        def self.profesional?
+            @monedas>75
+        end
+        def self.duplicar_monedas!
+            @monedas = (@monedas*2)
+         end
+  
+        end
+    </section>
+
+    <section>
+        <!-- Ejercicio 8 -->
+
+        <!-- En un curso tenemos un conjunto de estudiantes, a la hora de cerrar las actas es necesario saber cuántas personas aprobaron .
+         Teniendo en cuenta que cada estudiante sabe responder al mensaje aprobo_materia?...
+
+        Definí en Ruby el método cantidad_de_gente_aprobada que responda a cuántas personas aprobaron de Alumnado. -->
+
+        module Alumnado
+            @estudiantes = [May, Gus, Ro, Agus, Lu, Ale]
+  
+        def self.cantidad_de_gente_aprobada
+            @estudiantes.count{|un_estudiante| 
+            un_estudiante.aprobo_materia?}
+        end
+    end
+    </section>
+
+
+    <section>
+        <!-- ejercicio 9 -->
+        <!-- A la hora de hacer turismo, es recomendable tener en cuenta qué lugares son interesantes para recorrerlos . Sabemos que:
+
+        Los Mausoleos son interesantes si tienen más de 300 años.
+        Los Museos siempre son interesantes.
+        Los Puentes no son interesantes. -->
+
+        <!-- Definí el método atracciones_interesantes en la clase Pais que devuelva un listado de atracciones interesantes. 
+        Para eso deberás definir el método interesante? en los distintos tipos de atracciones. -->
+
+        class Pais
+        def initialize(unas_atracciones)
+            @atracciones = unas_atracciones
+        end
+        def atracciones_interesantes
+            @atracciones.select{|atraccion|atraccion.interesante? }
+        end
+        end
+
+        class Mausoleo
+        def initialize(unos_anios)
+            @anios = unos_anios
+        end
+        def interesante?
+            @anios>300
+        end
+        end
+
+        class Museo 
+        def interesante?
+            TRUE
+        end
+        end
+
+        class Puente
+        def interesante?
+            FALSE
+        end
+        end
+
+    </section>
+
+</body>
+</html>

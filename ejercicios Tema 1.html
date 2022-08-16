@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argentina Programa - Ejercicios tema 1</title>
+</head>
+<body>
+    
+    <section>
+        <!-- Ejercicio 1 -->
+<!-- 
+        Una fabrica de chocolates nos pidio un programa que se encargue de armar 
+        una caja de bombones con distintos sabores. Actualmente venden bombones de frutilla, menta y chocolatea amargo
+        que representaremos con bolitas de color Rojo, Verde y Negro respectivamente.
+        Las cajas tienen cuatro bombones y esta en particular tendra los siguientes gustos.
+
+        Es decir: una bolita de color Rojo, al Este, una de color VERDE, una de color VERDE al Este,
+        y al Este una de color ROJO.
+
+        crea el programa que haga la caja de bombones solicitada. El cabezal comienza en el extremo SUR OESTE 
+        y no importa donde termina.
+
+        Actividad:
+        Crea el programa que haga la caja de bombones solicitada. El cabezal comienza en el extremo
+        SUR OESTE  y no importa donde termina. -->
+
+        program {
+            Poner(Rojo)
+            Mover(Este)
+            Poner(Verde)
+            Mover(Este)
+            Poner(Verde)
+            Mover(Este)
+            Poner(Rojo)
+        }
+    </section>
+
+    <section>
+    Ejercicio 2:
+
+    Una extravagante repostería nos pidio ayuda para decorar su torta cuadrada de chocolate:
+
+    La decoración consta de un confite de un mismo color en cada extremo de la torta. El color puede ser Azul, Rojo, Verde o Negro. ¡Eso depende del gusto de quien encargue la torta! Si por ejemplo, alguien pide una torta con confites de color ROJO, la torta decorada deberia verse asi:
+
+    Defini el procedimiento ColocarConfites que recibe un color como argumento y decora la torta con confites de ese color 
+    comenzando en el extremo SUR OESTE. No importa donde termina el cabezal.
+
+    codigo:
+
+    procedure ColocarConfites(color) {
+        Poner(color)
+        Mover(Norte)
+        Mover(Norte)
+        Poner(Color)
+        Mover(Este)
+        Mover(Este)
+        Poner(color)
+        Mover(Sur)
+        Mover(Sur)
+        Poner(color)
+    }
+
+    </section>
+
+    <section>
+        Ejercicio 3
+
+        Sabemos que no es saludable para nuestros oidos escuchar musica a volumenes muy altos.
+        sin embargo, si esta muy bajita tampoco escucharemos. Lo ideal es escucharla a un nivel 
+        entre 31 y 63. Para ello tenemos la funcion esRecomendable:
+
+        esRecomendable(40)
+        true // Porque está entre 31 y 63
+
+        esRecomendable(19)
+        false // Porque es menor que 31
+
+        esRecomendable(80)
+        false // Porque es mayor que 63
+
+
+
+        Definí la función esRecomendable que dado un volumen nos diga si está en el rango recomendable.
+
+        <!-- solución -->
+
+        function esRecomendable(volumen) {
+            return volumen >= 31 && volumen <= 63;
+        
+        }
+
+    </section>
+
+
+    <section>
+        Ejercicio 4
+
+        Vamos a desarrollar un gps que nos recomiende un destino a partir de una direccion
+        para ellos definiremos una funcion que reciba una direccion y dos destinos y segun el valor del primer argumento nos recomiende hacia donde ir. Las unicas direcciones posibles son "noreste" y "sur"
+   en caso que el primer argumento sea "noreste" nos dira que vayamos al primer destino, si es sur nos recomendara que vayamos al segundo
+
+   Defini la funcion dondeVamos.
+
+   <!-- solucion -->
+
+   function dondeVamos(direccion, destino1, destino2){
+    if (direccion === "noreste") {
+        return "Vamos a " + destino1;
+    } else {
+        return "Vamos a" + destino2;
+    }
+   } 
+    </section>
+
+    
+
+</body>
+</html>
